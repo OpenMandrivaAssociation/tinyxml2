@@ -11,6 +11,7 @@ Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
 Source0:	http://downloads.sourceforge.net/tinyxml/%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRequires:	cmake
 
 %description
 TinyXML2 is a simple, small, C++ XML parser
