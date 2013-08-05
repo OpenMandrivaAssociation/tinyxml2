@@ -10,7 +10,6 @@ License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
 Source0:	http://downloads.sourceforge.net/tinyxml/%{name}-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	cmake
 
 %description
@@ -50,14 +49,10 @@ cd build
 %makeinstall_std
 
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/libtinyxml2.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %doc readme.md
 %{_includedir}/*.h
 %{_libdir}/libtinyxml2.so
 %{_libdir}/pkgconfig/*.pc
-
-%changelog
