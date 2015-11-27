@@ -1,11 +1,11 @@
-%define major 2
+%define major 3
 %define libname %mklibname %{name}_ %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	A small and simple XML parser
 Name:		tinyxml2
-Version:	2.0.2
-Release:	2
+Version:	3.0.0
+Release:	1
 License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
