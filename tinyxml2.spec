@@ -9,7 +9,7 @@ Release:	1
 License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
-Source0:	http://downloads.sourceforge.net/tinyxml/%{name}-%{version}.tar.gz
+Source0:  https://github.com/leethomason/%{name}/archive/%{version}.tar.gz
 BuildRequires:	cmake
 
 %description
