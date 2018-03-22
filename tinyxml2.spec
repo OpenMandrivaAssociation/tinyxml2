@@ -41,7 +41,7 @@ Development files and headers for %{name}.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch0 -p0
 
 %build
 %cmake
