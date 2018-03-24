@@ -1,5 +1,6 @@
 removed_sources:
   tinyxml2-1.0.11.tar.gz: 38693abd7d2a8cce4d18013af7948f136fcfe1fd
   tinyxml2-2.0.2.tar.gz: c78a4de58540e2a35f4775fd3e577299ebd15117
-sources:
   tinyxml2-3.0.0.tar.gz: 07acaae49f7dd3dab790da4fe72d0c7ef0d116d1
+sources:
+  tinyxml2-6.0.0.tar.gz c750e736506ab782c9d7bb9a7fd23b72ea797cec
