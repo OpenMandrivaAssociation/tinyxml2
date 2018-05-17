@@ -1,15 +1,18 @@
-%define major 3
+%define major 6
 %define libname %mklibname %{name}_ %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	A small and simple XML parser
 Name:		tinyxml2
-Version:	3.0.0
+Version:	6.0.0
 Release:	1
 License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
-Source0:	http://downloads.sourceforge.net/tinyxml/%{name}-%{version}.tar.gz
+Source0:  https://github.com/leethomason/%{name}/archive/%{version}.tar.gz
+Source1:	FindTinyXML2.cmake
+# https://github.com/leethomason/tinyxml2/pull/587
+Patch0:		0001-CMake-Respect-libdir-for-config-files.patch
 BuildRequires:	cmake
 
 %description
@@ -38,6 +41,7 @@ Development files and headers for %{name}.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %cmake
@@ -48,11 +52,16 @@ Development files and headers for %{name}.
 cd build
 %makeinstall_std
 
+# Install CMake find module
+install -D -m644 %{SOURCE1} %{buildroot}%{_datadir}/cmake/Modules/FindTinyXML2.cmake
+
 %files -n %{libname}
 %{_libdir}/libtinyxml2.so.%{major}*
 
 %files -n %{develname}
 %doc readme.md
+%{_datadir}/cmake/Modules/FindTinyXML2.cmake
+%{_libdir}/cmake/%{name}/
 %{_includedir}/*.h
 %{_libdir}/libtinyxml2.so
 %{_libdir}/pkgconfig/*.pc
