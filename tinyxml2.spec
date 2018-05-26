@@ -10,7 +10,7 @@ License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
 #Source0:  https://github.com/leethomason/%{name}/archive/%{version}.tar.gz
-Source0:  %{name}-&{version}.tar.gz
+Source0:  %{name}-%{version}.tar.gz
 Source1:	FindTinyXML2.cmake
 # https://github.com/leethomason/tinyxml2/pull/587
 Patch0:		0001-CMake-Respect-libdir-for-config-files.patch
