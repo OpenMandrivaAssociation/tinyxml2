@@ -1,16 +1,15 @@
-%define major 8
-%define libname %mklibname %{name}_ %{major}
+%define major 9
+%define libname %mklibname %{name}
 %define develname %mklibname %{name} -d
 
 Summary:	A small and simple XML parser
 Name:		tinyxml2
-Version:	8.1.0
+Version:	9.0.0
 Release:	1
 License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
 Source0:	https://github.com/leethomason/tinyxml2/archive/%{version}/%{name}-%{version}.tar.gz
-Source1:	FindTinyXML2.cmake
 BuildRequires:	cmake
 
 %description
@@ -39,23 +38,19 @@ Development files and headers for %{name}.
 
 %prep
 %autosetup -p1
+%cmake -G Ninja
 
 %build
-%cmake
-%make
+%ninja_build -C build
 
 %install
-%make_install -C build
-
-# Install CMake find module
-install -D -m644 %{SOURCE1} %{buildroot}%{_datadir}/cmake/Modules/FindTinyXML2.cmake
+%ninja_install -C build
 
 %files -n %{libname}
 %{_libdir}/libtinyxml2.so.%{major}*
 
 %files -n %{develname}
 %doc readme.md
-%{_datadir}/cmake/Modules/FindTinyXML2.cmake
 %{_libdir}/cmake/%{name}/
 %{_includedir}/*.h
 %{_libdir}/libtinyxml2.so
