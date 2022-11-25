@@ -10,7 +10,7 @@ License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
 Source0:	https://github.com/leethomason/tinyxml2/archive/%{version}/%{name}-%{version}.tar.gz
-BuildRequires:	cmake
+BuildRequires:	cmake ninja
 
 %description
 TinyXML2 is a simple, small, C++ XML parser
