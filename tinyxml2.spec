@@ -5,7 +5,7 @@
 Summary:	A small and simple XML parser
 Name:		tinyxml2
 Version:	9.0.0
-Release:	1
+Release:	2
 License:	zlib
 Group:		System/Libraries
 Url:		http://www.grinninglizard.com/tinyxml/
