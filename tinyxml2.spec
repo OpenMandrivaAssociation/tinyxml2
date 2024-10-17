@@ -8,7 +8,7 @@ Version:	10.0.0
 Release:	1
 License:	zlib
 Group:		System/Libraries
-Url:		http://www.grinninglizard.com/tinyxml/
+Url:		https://www.grinninglizard.com/tinyxml/
 Source0:	https://github.com/leethomason/tinyxml2/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	cmake ninja
 
