@@ -4,7 +4,7 @@
 
 Summary:	A small and simple XML parser
 Name:		tinyxml2
-Version:	10.1.0
+Version:	11.0.0
 Release:	1
 License:	zlib
 Group:		System/Libraries
